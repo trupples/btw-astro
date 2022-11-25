@@ -1,0 +1,21 @@
+.ContactCard {
+	display: inline-flex;
+	flex-direction: column;
+	width: 90vw;
+	max-width: 35ch;
+
+	text-align: center;
+	margin-bottom: 2em;
+	margin-top: 2em;
+}
+
+.ContactCard img {
+	aspect-ratio: 1;
+	border-radius: 50%;
+	width: 200px;
+	margin: 1em auto;
+}
+
+.ContactCard .name {
+	font-size: 1.5em;
+}
