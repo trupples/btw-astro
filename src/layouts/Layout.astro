@@ -1,4 +1,14 @@
 ---
+
+import type { MarkdownLayoutProps } from 'astro';
+
+type Props = MarkdownLayoutProps<{
+  // Define frontmatter props here
+  title: string;
+  author: string;
+  date: string;
+}>;
+
 export interface Props {
 	title: string;
 }
@@ -14,7 +24,7 @@ const { title } = Astro.props;
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<title>{title}</title>
-		<link href="https://fonts.googleapis.com/css2?family=Nunito+Sans&family=Rubik:wght@500&display=swap" rel="stylesheet" />
+		<link href="https://fonts.googleapis.com/css2?family=Nunito+Sans&family=Rubik:wght@500;700&display=swap" rel="stylesheet" />
 	</head>
 	<body>
 		<nav>
@@ -34,6 +44,21 @@ const { title } = Astro.props;
 		</nav>
 
 		<slot />
+
+		<footer>
+			<ul id="footer-links">
+				<li><a href="http://bestcj.ro/">BEST Cluj-Napoca</a></li>
+				<li><a href="http://bestcj.ro/3-5-percent-program/">Program 3.5%</a></li>
+				<li><a href="http://utcluj.ro/">UTCN</a></li>
+			</ul>
+			<hr/>
+			<ul id="footer-socialmedia">
+				<li><a href="https://www.instagram.com/best_clujnapoca/"><img src="instagram.svg" alt="Instagram @best_clujnapoca" /></a></li>
+				<li><a href="https://www.facebook.com/BESTcluj/"><img src="facebook.svg" alt="Facebook @BESTcluj" /></a></li>
+				<li><a href="https://www.linkedin.com/company/best-cluj-napoca"><img src="linkedin.svg" alt="LinkedIn BEST Cluj-Napoca" /></a></li>
+			</ul>
+			&copy; BEST Cluj-Napoca 2022
+		</footer>
 	</body>
 </html>
 
@@ -41,10 +66,12 @@ const { title } = Astro.props;
 body {
 	margin: 0;
 	font-family: "Nunito Sans", sans-serif;
+	background: #162928;
+	color: white;
 }
 
 nav {
-	position: sticky;
+	position: fixed;
 	left: 0; top: 0; right: 0; height: 64px;
 	background: rgba(0, 0, 0, 0.7);
 	
@@ -52,6 +79,8 @@ nav {
 
 	overflow-x: clip;
 	overflow-y: visible;
+
+	z-index: 100;
 }
 
 nav a {
@@ -101,7 +130,7 @@ nav img {
 
 #sidebar-backdrop {
 	display: none;
-	position: absolute;
+	position: fixed;
 	left: 0; top: 0; width: 100vw; height: 100vh;
 	background: rgba(0, 0, 0, 0.5);
 
@@ -116,18 +145,15 @@ nav img {
 
 @media screen and (max-width: 100ch) {
 	#nav-list {
-		position: absolute;
+		position: fixed;
 		top: 0; left: 100vw; width: 20em; height: 100vh;
 		max-width: 80vw;
 		background: white;
+		color: black;
 
 		flex-direction: column;
 
 		transition: transform 200ms;
-	}
-
-	nav a {
-		color: black;
 	}
 
 	#sidebar-toggle {
@@ -145,4 +171,53 @@ nav img {
 		display: block;
 	}
 }
+
+footer {
+	margin-top: 3em;
+	padding: 2em 1em;
+	text-align: center;
+	background: rgba(0,0,0,0.3);
+}
+
+footer ul {
+	list-style: none;
+	padding: 0;
+	display: flex;
+	justify-content: center;
+	gap: 2em;
+}
+
+footer ul img {
+	height: 2em;
+}
+
+</style>
+
+<style is:global>
+
+nav + * {
+	padding-top: 64px;
+}
+
+main {
+	margin: auto;
+	width: 100vw;
+	max-width: 80ch;
+	padding: 1em;
+	box-sizing: border-box;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: Rubik, sans-serif;
+	font-weight: 500;
+}
+
+h1 {
+	font-size: 40px;
+}
+
+a {
+	color: inherit;
+}
+
 </style>
