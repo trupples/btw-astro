@@ -1,0 +1,62 @@
+#first-section {
+	position: relative;
+	box-sizing: border-box;
+	min-height: 100vh;
+	text-align: center;
+
+	background: url('clouds.svg'), linear-gradient(180deg, #47BCEB 35.23%, #DAF4FF 100%);
+	background-repeat: no-repeat;
+	background-position-y: 30%;
+	color: black;
+
+	/* Prevent overlap with leaves */
+	padding-bottom: calc(min(10vw, 100px));
+	margin-bottom: calc(min(10vw, 100px));
+}
+
+#logo {
+	width: 65vw;
+	max-width: 430px;
+}
+
+#first-section h1, #first-section h2 {
+	font-size: 2.25rem;
+	margin: 0;
+	z-index: 2;
+}
+
+#first-section h1 {
+	font-weight: 700;
+}
+
+#subtitle {
+	margin-bottom: 3.5rem;
+}
+
+@media screen and (max-width: 100ch) {
+	#first-section h1, #first-section h2 {
+		font-size: 2rem;
+	}
+}
+
+#leaves-left, #leaves-right {
+	position: absolute;
+	pointer-events: none;
+	z-index: 1;
+}
+
+#leaves-left {
+	left: 0; bottom: calc(min(60vw, 500px) * -0.3);
+	width: 60vw; max-width: 500px;
+}
+
+#leaves-right {
+	right: 0; bottom: calc(min(60vw, 400px) * -0.6);
+	width: 60vw; max-width: 400px;
+}
+
+#color-change {
+	position: absolute;
+	bottom: -24px; height: 24px; width: 100vw;
+	background: linear-gradient(180deg, #DAF4FF 0%, #161A29 100%);
+}
