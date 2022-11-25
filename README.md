@@ -1,50 +1,55 @@
-# Welcome to [Astro](https://astro.build)
+# BEST Training Weekend website with [Astro](https://astro.build)
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/basics)
-[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/s/github/withastro/astro/tree/latest/examples/basics)
+WoOoOo!
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+Alright, we switched from WordPress to plain old HTML and now from plain old HTML to slightly more organized HTML, with the help of [Astro](https://astro.build)! No fancy components this time, we're just using it as a Static Site Generator.
 
-![basics](https://user-images.githubusercontent.com/4677417/186188965-73453154-fdec-4d6b-9c34-cb35c248ae5b.png)
+# Getting started
 
+Clone this repo and run `npm install`.
 
-## 🚀 Project Structure
-
-Inside of your Astro project, you'll see the following folders and files:
+## When developing, do
 
 ```
-/
-├── public/
-│   └── favicon.svg
-├── src/
-│   ├── components/
-│   │   └── Card.astro
-│   ├── layouts/
-│   │   └── Layout.astro
-│   └── pages/
-│       └── index.astro
-└── package.json
+npm run dev
 ```
 
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
+or use the fancy button in VS Code that this supposedly creates.
 
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
+## When deploying, do
 
-Any static assets, like images, can be placed in the `public/` directory.
+```
+npm run build
+```
 
-## 🧞 Commands
+and upload the contents of the created `dist/` folder to the web server. Don't commit `dist/` :)
 
-All commands are run from the root of the project, from a terminal:
+# I want to...
 
-| Command                | Action                                             |
-| :--------------------- | :------------------------------------------------- |
-| `npm install`          | Installs dependencies                              |
-| `npm run dev`          | Starts local dev server at `localhost:3000`        |
-| `npm run build`        | Build your production site to `./dist/`            |
-| `npm run preview`      | Preview your build locally, before deploying       |
-| `npm run astro ...`    | Run CLI commands like `astro add`, `astro preview` |
-| `npm run astro --help` | Get help using the Astro CLI                       |
+## ...Add a new page
 
-## 👀 Want to learn more?
+Create a file in `src/pages`. It can be a markdown file (see `*.md` for the structure) or an `.astro` file (or a bunch of others, see the astro docs. It can also be plain `.html` but we're shooting ourselves in the foot if we do that)
 
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+## ...Change the layout common to all pages (navbar, footer, colors)
+
+Check out `src/layours/Layout.astro`!
+
+## ...Add some images / resources
+
+Add them to `public/` and then just reference them as if they're in the root directory:
+
+```html
+<img src='hello.png' /> goes to public/hello.png
+```
+
+## ...Make a JS component
+
+Check out the Astro documentation :)
+
+## ...Break free
+
+```
+I want to break free
+I want to break free from your lies
+You're so self-satisfied, I don't need you
+```
