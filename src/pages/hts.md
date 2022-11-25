@@ -1,6 +1,6 @@
 ---
 layout: ../layouts/Layout.astro
-title: How To Startup
+title: How To Start-up
 ---
 
 <main>
