@@ -4,9 +4,7 @@
 	min-height: 100vh;
 	text-align: center;
 
-	background: url('/clouds.svg'), linear-gradient(180deg, #47BCEB 35.23%, #DAF4FF 100%);
-	background-repeat: no-repeat;
-	background-position-y: 30%;
+	background: linear-gradient(180deg, #47BCEB 35.23%, #DAF4FF 100%);
 	color: black;
 
 	/* Prevent overlap with leaves */
@@ -59,4 +57,25 @@
 	position: absolute;
 	bottom: -24px; height: 24px; width: 100vw;
 	background: linear-gradient(180deg, #DAF4FF 0%, #161A29 100%);
+}
+
+#logos {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+
+	margin-top: 3em;
+}
+
+#logos img {
+	flex-shrink: 1;
+}
+
+@media screen and (min-width: 920px) {
+	#logos {
+		flex-direction: row;
+		gap: 100px;
+	}
 }
