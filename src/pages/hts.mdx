@@ -2,13 +2,23 @@
 layout: ../layouts/Layout.astro
 title: How To Start-up
 ---
+import './hts.css';
 import Gallery from '../components/Gallery.tsx';
+import Speaker from '../components/Speaker.tsx';
 
-wip :)
+<div id='first-section'>
+	<h1>HOW TO START<span class='cratima-vietii'>-</span>UP</h1>
+	<h2><em>9 Decembrie</em>, ora <em>16:00</em></h2>
+	<h2><a href="https://goo.gl/maps/MKMRF2eEGbCtvk8T7" target="_blank">Tech'n Trade</a></h2>
+	<br/><br/>
+	<h2><a href=''>Înscrie-te!</a></h2>
+	<img id="leaves-left" src="hts-leaves-left.png" />
+	<img id="leaves-right" src="hts-leaves-right.png" />
+</div>
 
 <main>
 
-# Ce este How To Start-up?
+# Ce este How To Start<span class='cratima-vietii'>-</span>up?
 
 "How to Start-Up" este un eveniment dedicat atât studenților, cât și celor care își doresc să afle mai multe despre ce înseamnă cu adevărat un start-up și să decompere care este calea către succes. Dorința noastră este de a le oferi oamenilor cunoștințele necesare cu privire la acest subiect, dar și de a îi încuraja, determinându-i să își împlinească visurile.
 
@@ -31,5 +41,37 @@ Alături de noi se vor afla oameni de succes care ne vor împărtăși cheia dru
 	<img src="gal/7.png" width="300" />
 	<img src="gal/7.png" width="300" />
 </Gallery>
+
+# Speakers
+
+
+<div class='row-list'>
+<Speaker name="Adrian Florian" profession="Wolfpack Digital">
+Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+</Speaker>
+
+<Speaker name="Andrei Ursachi" profession="Stailer">
+Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+</Speaker>
+
+<Speaker name="Marius Popa" profession="Școala de muzica the beat">
+Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+</Speaker>
+</div>
 
 </main>
