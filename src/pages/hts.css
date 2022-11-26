@@ -2,7 +2,7 @@
 
 @font-face {
 	font-family: 'Nexa Rust Sans Black';
-	src: url('NexaRustSans-Black.otf');
+	src: url('/NexaRustSans-Black.otf');
 }
 
 body {
@@ -25,7 +25,7 @@ body {
 	color: #eeb595;
 	font-weight: 500;
 
-	background: url('hts-twinkle.png');
+	background: url('/hts-twinkle.png');
 	background-position-y: calc(100vh - calc(min(100vw, 1500px)) * 0.3);
 	background-position-x: center;
 	background-size: calc(min(100vw, 1500px));
