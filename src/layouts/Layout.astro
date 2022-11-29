@@ -14,21 +14,21 @@ const { title } = Astro.props.frontmatter;
 		<link href="https://fonts.googleapis.com/css2?family=Nunito+Sans&family=Rubik:wght@500;700&display=swap" rel="stylesheet" />
 	</head>
 	<body>
-		<nav>
-			<a href="/"><img src="/BTW-white-small.png" height="64" alt="BEST Training Weekend" /></a>
+		<div id="nav-container">
+			<nav>
+				<a href="/"><img src="/BTW-white-small.png" height="64" alt="BEST Training Weekend" /></a>
 
-			<label id="sidebar-toggle" for="sidebar-toggle-state" role="button"><img src="/menu-toggle.svg" alt="Open sidebar menu" /></label>
-			<input type="checkbox" id="sidebar-toggle-state" />
-			<ul id="nav-list">
-				<li><a href="/hts">How To Startup</a></li>
-				<li><a href="/trainers">Trainers</a></li>
-				<li><a href="/collaborators">Collaborators</a></li>
-				<li><a href="https://bestcj.ro/">BEST</a></li>
-				<li><a href="https://bestcj.ro/3-5-percent-program/">3.5% Program</a></li>
-				<li><a href="/contact">Contact</a></li>
-			</ul>
-			<label for="sidebar-toggle-state" id="sidebar-backdrop"></label>
-		</nav>
+				<label id="sidebar-toggle" for="sidebar-toggle-state" role="button"><img src="/menu-toggle.svg" alt="Open sidebar menu" /></label>
+				<input type="checkbox" id="sidebar-toggle-state" />
+				<ul id="nav-list">
+					<li><a href="/hts">How To Startup</a></li>
+					<li><a href="/collaborators">Collaborators</a></li>
+					<li><a href="https://bestcj.ro/3-5-percent-program/">3.5% Program</a></li>
+					<li><a href="/contact">Contact</a></li>
+				</ul>
+				<label for="sidebar-toggle-state" id="sidebar-backdrop"></label>
+			</nav>
+		</div>
 
 		<slot />
 
@@ -57,17 +57,25 @@ body {
 	color: white;
 }
 
-nav {
+#nav-container {
 	position: fixed;
-	left: 0; top: 0; right: 0; height: 64px;
+	left: 0; top: 0; right: 0; 
+	height: 64px;
 	background: rgba(0, 0, 0, 0.7);
+	z-index: 100;
+}
+
+nav {
+	margin: auto;
+	width: 90vw;
+	max-width: 60rem;
+	height: 64px;
+	box-sizing: border-box;
 	
 	color: white;
 
 	overflow-x: clip;
 	overflow-y: visible;
-
-	z-index: 100;
 }
 
 nav a {
@@ -124,13 +132,13 @@ nav img {
 	z-index: 1;
 }
 
-@media screen and (min-width: 100ch) {
+@media screen and (min-width: 60rem) {
 	nav a {
 		color: white;
 	}
 }
 
-@media screen and (max-width: 100ch) {
+@media screen and (max-width: 60rem) {
 	#nav-list {
 		position: fixed;
 		top: 0; left: 100vw; width: 20em; height: 100vh;
@@ -185,12 +193,12 @@ footer ul img {
 main {
 	margin: auto;
 	width: 90vw;
-	max-width: 100ch;
+	max-width: 60rem;
 	padding: 1em;
 	box-sizing: border-box;
 }
 
-nav + * {
+#nav-container + * {
 	padding-top: 64px;
 }
 
