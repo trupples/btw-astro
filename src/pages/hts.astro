@@ -1,0 +1,190 @@
+---
+import Gallery from '../components/Gallery.tsx';
+import Speaker from '../components/Speaker.tsx';
+import Layout from '../layouts/Layout.astro';
+title: 
+---
+
+<Layout title='How To Start-up'>
+	<div id='first-section'>
+		<div id="logos">
+			<a href='https://bestcj.ro'><img src="/BESTCJ_signature-hts.png" alt="BEST Cluj-Napoca logo" height="100" /></a>
+			<a href='https://utcluj.ro'><img src="/UT_Logo-hts.png" alt="Technical University of Cluj-Napoca logo" height="100" /></a>
+		</div>
+		<h1>HOW TO START<span class='cratima-vietii'>-</span>UP</h1>
+		<h2><em>9 Decembrie</em>, ora <em>16:00</em></h2>
+		<h2><a href="https://goo.gl/maps/MKMRF2eEGbCtvk8T7" target="_blank">Tech'n Trade</a></h2>
+		<br/><br/>
+		<h2><a href=''>Înscrie-te!</a></h2>
+		<img id="leaves-left" src="/hts-leaves-left.png" />
+		<img id="leaves-right" src="/hts-leaves-right.png" />
+	</div>
+
+	<main>
+
+	# Ce este How To Start<span class='cratima-vietii'>-</span>up?
+
+	"How to Start-Up" este un eveniment dedicat atât studenților, cât și celor care își doresc să afle mai multe despre ce înseamnă cu adevărat un start-up și să decompere care este calea către succes. Dorința noastră este de a le oferi oamenilor cunoștințele necesare cu privire la acest subiect, dar și de a îi încuraja, determinându-i să își împlinească visurile.
+
+	Alături de noi se vor afla oameni de succes care ne vor împărtăși cheia drumului de la idee la implementare și motivația din spatele inițiativei lor.
+
+	# Galerie
+
+	<Gallery>
+		<img src="/gal/1.png" width="300" />
+		<img src="/gal/2.png" width="300" />
+		<img src="/gal/3.png" width="300" />
+		<img src="/gal/4.png" width="300" />
+		<img src="/gal/5.png" width="300" />
+		<img src="/gal/6.png" width="300" />
+		<img src="/gal/7.png" width="300" />
+		<img src="/gal/7.png" width="300" />
+		<img src="/gal/7.png" width="300" />
+		<img src="/gal/7.png" width="300" />
+		<img src="/gal/7.png" width="300" />
+		<img src="/gal/7.png" width="300" />
+		<img src="/gal/7.png" width="300" />
+	</Gallery>
+
+	# Speakers
+
+
+	<div class='row-list'>
+	<Speaker name="Adrian Florian" profession="Wolfpack Digital">
+	Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+	tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+	quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+	consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+	cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+	proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+	</Speaker>
+
+	<Speaker name="Andrei Ursachi" profession="Stailer">
+	Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+	tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+	quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+	consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+	cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+	proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+	</Speaker>
+
+	<Speaker name="Marius Popa" profession="Școala de muzica the beat">
+	Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+	tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+	quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+	consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+	cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+	proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+	</Speaker>
+	</div>
+
+	</main>
+</Layout>
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap');
+
+@font-face {
+	font-family: 'Nexa Rust Sans Black';
+	src: url('/NexaRustSans-Black.otf');
+}
+
+body {
+	background: #1b1220 !important; /* for some reason, /hts also includes collaborators.css ????? need to override that */
+}
+
+main {
+	font-family: Poppins, sans-serif;
+	font-weight: 400;
+}
+
+#first-section {
+	position: relative;
+	box-sizing: border-box;
+	min-height: 100vh;
+	text-align: center;
+
+	/* Prevent overlap with leaves */
+	padding-bottom: calc(min(10vw, 200px));
+	margin-bottom: calc(min(10vw, 200px));
+
+	color: #eeb595;
+	font-weight: 500;
+
+	background: url('/hts-twinkle.png');
+	background-position-y: calc(100vh - calc(min(100vw, 1500px)) * 0.3);
+	background-position-x: center;
+	background-size: calc(min(100vw, 1500px));
+	background-repeat: no-repeat;
+
+	padding-top: 30vh !important;
+}
+
+#logos {
+	position: absolute;
+	top: 100px;
+	left: 50%; transform: translateX(-50%);
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+	flex-direction: row;
+	gap: 10em;
+
+	margin: auto;
+}
+
+#logos img {
+	flex-shrink: 1;
+}
+
+#first-section em {
+	color: #ee7f7f;
+	font-style: unset;
+}
+
+h1 {
+	font-family: 'Nexa Rust Sans Black', 'Rubik', sans-serif;
+}
+
+#first-section h1 {
+	font-size: 4rem;
+	font-weight: bold;
+}
+
+#first-section h2 {
+	font-size: 2rem;
+	margin: unset;
+}
+
+@media screen and (max-width: 60rem) {
+	#first-section h1 {
+		font-size: 2rem;
+	}
+
+	#first-section h2 {
+		font-size: 1.5rem;
+	}
+}
+
+#leaves-left, #leaves-right {
+	position: absolute;
+	pointer-events: none;
+	z-index: 1;
+}
+
+#leaves-left {
+	left: 0; bottom: calc(min(40vw, 600px) * -0.3);
+	width: 40vw; max-width: 600px;
+}
+
+#leaves-right {
+	right: 0; bottom: calc(min(40vw, 600px) * -0.3);
+	width: 40vw; max-width: 600px;
+}
+
+
+.cratima-vietii {
+	font-family: Rubik;	
+}
+</style>

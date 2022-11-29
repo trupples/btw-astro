@@ -10,7 +10,7 @@
 	/* Prevent overlap with leaves */
 	padding-bottom: calc(min(10vw, 100px));
 	margin-bottom: calc(min(10vw, 100px));
-	padding-top: 30vh;
+	padding-top: 30vh !important;
 }
 
 #logos {
