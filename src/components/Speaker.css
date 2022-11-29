@@ -1,6 +1,8 @@
 .Speaker {
 	text-align: center;
 	margin: 2em auto;
+	padding: 1em;
+	box-sizing: border-box;
 	gap: 0.5rem;
 
 	display: flex;
