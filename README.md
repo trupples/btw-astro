@@ -2,7 +2,9 @@
 
 WoOoOo!
 
-Alright, we switched from WordPress to plain old HTML and now from plain old HTML to slightly more organized HTML, with the help of [Astro](https://astro.build)! No fancy components this time, we're just using it as a Static Site Generator.
+Alright, we switched from WordPress to plain old HTML and now from plain old HTML to slightly more organized "HTML", with the help of [Astro](https://astro.build)! Some parts are written as Preact components. Don't expect a huge load of consistency (e.g. BTW "first section" is a component, HTS "first section" is inlined in the page, even though they serve the same purpose and have the same structure) but the code should at least be half-sane :)
+
+Development version deployed on [https://btw-dev.paxule.cf](https://btw-dev.paxule.cf)
 
 # Getting started
 
