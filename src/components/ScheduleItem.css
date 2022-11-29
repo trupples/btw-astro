@@ -1,0 +1,61 @@
+.ScheduleItem {
+	display: grid;
+
+	grid-template-areas: 'time time'
+	'img topic'
+	'img name'
+	'img comp'
+	'img desc'
+	'x   desc';
+	grid-template-rows: auto auto auto auto 1fr auto;
+
+	margin: 3rem 0;
+	gap: 4px 16px;
+}
+
+.ScheduleItem .interval {
+	grid-area: time;
+	font-size: 1.5rem;
+}
+
+.ScheduleItem img {
+	grid-area: img;
+	border-radius: 2em;
+	margin: auto;
+}
+
+.ScheduleItem .name {
+	grid-area: name;
+	font-size: 1.6rem;
+	font-weight: bold;
+}
+
+.ScheduleItem .company {
+	grid-area: comp;
+	font-size: 1.3rem;
+}
+
+.ScheduleItem .topic {
+	grid-area: topic;
+	font-size: 2rem;
+	font-weight: bold;
+}
+
+.ScheduleItem .desc {
+	grid-area: desc;
+}
+
+@media screen and (max-width: 600px) {
+	.ScheduleItem {
+		gap: 0.3em;
+
+		grid-template-areas: 'time'
+		'img'
+		'topic'
+		'name'
+		'comp'
+		'desc';
+
+		text-align: center;
+	}
+}
