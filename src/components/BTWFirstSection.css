@@ -77,3 +77,12 @@
 	bottom: -24px; height: 24px; width: 100%;
 	background: linear-gradient(180deg, #DAF4FF 0%, #161A29 100%);
 }
+
+.call-to-action {
+	padding: 0.5em 1em;
+	border-radius: 1em;
+
+	background: #162928;
+	color: white;
+	mix-blend-mode: darken;
+}

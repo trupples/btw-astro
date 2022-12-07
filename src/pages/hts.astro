@@ -14,7 +14,7 @@ import Layout from '../layouts/Layout.astro';
 		<h2><em>9 Decembrie</em>, ora <em>16:00</em></h2>
 		<h2><a href="https://goo.gl/maps/MKMRF2eEGbCtvk8T7" target="_blank">Tech'n Trade</a></h2>
 		<br/><br/>
-		<h2><a href=''>Înscrie-te!</a></h2>
+		<h2><a class="call-to-action" href="https://docs.google.com/forms/d/e/1FAIpQLSf709C80tc8nCMs6QFl2uNBzcz7MBNcAsafxDRx1r0lIt2AKA/viewform">Înscrie-te!</a></h2>
 		<img id="leaves-left" src="/hts-leaves-left.png" />
 		<img id="leaves-right" src="/hts-leaves-right.png" />
 	</div>
@@ -159,5 +159,14 @@ h1 {
 
 .cratima-vietii {
 	font-family: Rubik;	
+}
+
+.call-to-action {
+	padding: 0.5em 1em;
+	border-radius: 1em;
+
+	background: #eeb595;
+	color: black;
+	mix-blend-mode: lighten;
 }
 </style>
