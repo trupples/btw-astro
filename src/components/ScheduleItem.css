@@ -1,16 +1,18 @@
 .ScheduleItem {
 	display: grid;
 
-	grid-template-areas: 'time time'
+	grid-template-areas: 'img time'
 	'img topic'
 	'img name'
 	'img comp'
 	'img desc'
-	'x   desc';
-	grid-template-rows: auto auto auto auto 1fr auto;
+	'x desc';
+	grid-template-rows: auto auto auto auto auto;
+	grid-template-columns: auto 1fr;
 
 	margin: 3rem 0;
 	gap: 4px 16px;
+	align-items: start;
 }
 
 .ScheduleItem .interval {
@@ -22,6 +24,8 @@
 	grid-area: img;
 	border-radius: 2em;
 	margin: auto;
+	width: 10em;
+	align-items: start;
 }
 
 .ScheduleItem .name {
